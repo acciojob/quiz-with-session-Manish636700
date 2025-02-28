@@ -38,9 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 radio.type = "radio";
                 radio.name = `question${index}`;
                 radio.value = choice;
-                if (progress[index] === choice) {
-                    radio.checked = true;
-                }
+                radio.checked = progress[index] === choice ? true : false;
                 radio.addEventListener("change", () => {
                     progress[index] = choice;
                     saveProgress(progress);
